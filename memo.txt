@@ -1,0 +1,54 @@
+props 는 변하지 않는 데이터를 처리하는데 사용된다.
+
+{this.props.propsname}
+
+this.props.children은 모든 reactcomponent가 가지고 있다
+
+props.children은 <dic>여기</div> 에 있는 내용을 말한다.
+
+
+props의 기본값 설정
+
+class로 선언이 끝난뒤 class명.defaultProps = {} 로 설정 한다.
+
+props의 타입 검증 class로 선언이 끝난뒤 class명.propTypes = {}로 검증
+React.PropTypes.string
+
+state는 유동적인 데이터를 처리 하는데에 사용한다.
+
+jsx내부에 {this.state.statename}
+초기값 설정 필수 생성자 construcrot에서 this.state = {}로 설정
+값을 수정 할때에는 this.setDate({})로 수정한다.
+렌더링된 다음에는 this.state = 절대 사용하지 말것
+
+
+
+
+constructor의 파라메터는 props이고 super(props);를 통하여 reactcomponent를 먼저 설행하고 우리가 할 작업을 실행한다.
+
+this.<method> = this.<method>.bind(this) 
+
+메소드에서 this가 뭔지 몰라서 bind를 해줘야 함
+
+
+
+class App extends React.Componemt {
+    constructor(props){
+        super(props);
+        this.state = {
+            value : 0
+        }
+        this.test = test.test.bind(this);
+    }
+
+    test(){
+        this.setState({
+            value: this.value + 1
+        });
+    }
+    render(){
+        return (
+            <button onClick={this.test}>pressme</button>
+        )
+    }
+}
