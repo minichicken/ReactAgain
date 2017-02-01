@@ -33,11 +33,9 @@ class TodoWrite extends React.Component {
 
     render() {
         return (
-            <div className={styles.todoItem}>
-                <Paper style={this.style} rounded={false} >
-                    <TextField hintText="오늘 할 일" fullWidth={true} onKeyDown={this.handleOnKeyDown} value={this.state.todo} onChange={this.handleOnChange} />
-                </Paper>
-            </div>
+            <Paper style={this.style} rounded={false} className={styles.todoItem}>
+                <TextField hintText="오늘 할 일" fullWidth={true} onKeyDown={this.handleOnKeyDown} value={this.state.todo} onChange={this.handleOnChange} />
+            </Paper>
         );
     }
 

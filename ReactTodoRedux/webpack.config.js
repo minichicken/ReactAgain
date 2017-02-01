@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './server/index.js',
+    entry: './src/index.js',
     output: {
         path: __dirname + '/public/',
         filename: 'bundle.js'
@@ -20,7 +20,7 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'stage-2', 'react']
                 }
             },
             {

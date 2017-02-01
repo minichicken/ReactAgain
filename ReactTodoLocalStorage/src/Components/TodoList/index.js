@@ -9,7 +9,7 @@ import styles from './todoList.css';
 class TodoList extends React.Component {
     constructor(props) {
         super(props);
-        let todos = JSON.parse(localStorage.getItem('todos')) || []
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
         this.state = {
             todoList: todos,
         };
@@ -20,13 +20,13 @@ class TodoList extends React.Component {
     createItem(todo) {
         this.setState({
             todoList: Update(this.state.todoList, { $push: [{ content: todo }] })
-        })
+        });
     }
 
     deleteItem(index) {
         this.setState({
             todoList: Update(this.state.todoList, { $splice: [[index, 1]] })
-        })
+        });
     }
 
     render() {

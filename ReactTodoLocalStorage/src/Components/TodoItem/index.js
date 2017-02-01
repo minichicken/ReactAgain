@@ -9,21 +9,24 @@ class TodoItem extends React.Component {
 
     render() {
         return (
-            <div>
-                <Card>
-                    <CardHeader title={this.props.content} />
-                    <CardActions>
-                        <FlatButton label="삭제" onClick={()=> this.props.delete(this.props.id)} />
-                    </CardActions>
-                </Card>
-            </div>
+            <Card>
+                <CardHeader title={this.props.content} />
+                <CardActions>
+                    <FlatButton label="삭제" onClick={() => this.props.delete(this.props.id)} />
+                </CardActions>
+            </Card>
         );
+    }
+
+    deletePost() {
+
     }
 }
 
 TodoItem.propsTypes = {
     content: React.PropTypes.string,
     delete: React.PropTypes.func,
-}
+    id: React.PropTypes.number,
+};
 
 export default TodoItem;

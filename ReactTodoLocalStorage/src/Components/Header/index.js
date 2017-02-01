@@ -4,7 +4,6 @@ import AppBar from 'material-ui/AppBar';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
     }
 
     render() {
@@ -18,6 +17,6 @@ class Header extends React.Component {
 
 Header.propsTypes = {
     title: React.PropTypes.string.isRequired,
-}
+};
 
 export default Header;
