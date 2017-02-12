@@ -18,12 +18,12 @@ class TodoWrite extends React.Component {
         this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
         this.handleOnChange = this.handleOnChange.bind(this);
     }
-
-    test() {
-        this.setState((prev) => ({
-            toggle: !prev.toggle
-        }));
-    }
+//
+//    test() {
+//        this.setState((prev) => ({
+//            toggle: !prev.toggle
+//        }));
+//    }
 
     handleOnChange(e) {
         let newState = {};
